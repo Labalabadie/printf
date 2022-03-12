@@ -1,6 +1,9 @@
 #include "main.h"
 int main()
 {
-	_printf("My name is %s, and my initials are %c%c\n");
+	char p = p;
+	char pepito = pepito;
+
+	_printf("My name is %s, and my initials are %c%c\n", pepito, p, p);
 	return(0);
 }
