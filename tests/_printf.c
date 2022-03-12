@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- *
+ * _printf - function that produces output according to a format
+ * @format: arguments passed
+ * Return: length of output string
  **/
 int _printf(const char *format, ...)
 {
@@ -10,7 +12,7 @@ int _printf(const char *format, ...)
 	pfunc selector[] = {
 		{'c', print_c},
 		{'s', print_s},
-		{'\0',NULL}
+		{'\0', NULL}
 	};
 	va_start(arg, format);
 	while (format[i] != '\0')
