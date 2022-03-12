@@ -11,7 +11,7 @@ int print_c(char c);
 typedef struct pfunc
 {
 	char c;
-	void (*f)(va_list);
+	void (*f)(va_list arg);
 } pfunc;
 
 
