@@ -2,9 +2,11 @@
 #include <stdio.h>
 int main()
 {
-	char p = 'p';
-
-	_printf("My name is pepito, and my initials are %c%c\n", p, p);
+	char initialsurename = 'M';
+	char initialname = 'P';
+	char *name = "Pepito";
+	_printf("My name is %s, and my initials are %c%c\n", name, initialname, initialsurename);
+	printf("My name is %s, and my initials are %c%c\n", name, initialname, initialsurename);
 /*	printf("%d",_printf("hola"));*//*testing return of _printf, counts character printed*/
 	return(0);
 }
