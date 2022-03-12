@@ -1,18 +1,9 @@
 #include "main.h"
-int print_c(va_list c)
+int print_c(va_list arg)
 {
-_putchar(va_list c, char);
+	char c;
 
-
-
-
-
-/*	va_arg(n, char*);
-	while (*n == '\0')
-	{
-	_putchar(*n);
-	n++;
-	}
-	*/
-	return(0);
+	c = va_arg(arg, int);
+	_putchar(c);
+	return(1);
 }

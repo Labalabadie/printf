@@ -1,16 +1,7 @@
 #include "main.h"
-
 /**
  *
- *
- *
- *
- *
- *
- *
  **/
-
-
 int _printf(const char *format, ...)
 {
 	int i = 0;
@@ -19,31 +10,31 @@ int _printf(const char *format, ...)
 	pfunc selector[] = {
 		{'c', print_c},
 		{'s', print_s},
-	}
+		{'\0',NULL}
+	};
 	va_start(arg, format);
 	while (format[i] != '\0')
 	{
-		while (format[i] != '%')
+		if (format[i] != '%')
 		{
-			if (format [i] != '\0')
+			_putchar(format[i]);
+			i++;
+			continue;
+		}
+		else
+		{
+			j = 0;
+			while (format[i + 1] != selector[j].x)
 			{
-				_putchar(format[i]);
-				i++;
-			}
-			while (format[i] == '%')
-			{
-				if(format[i] == '%')
-					i++
-				j = 0;
-				if (format[i] == selector[j].x)
-				{
-					selector[j].f(arg);
-				}
 				j++;
 			}
+			if (selector[j].f != NULL)
+				selector[j].f(arg);
 		}
+		i++;
+		i++;
 	}
 	va_end(arg);
-	return (0);
+	return (i);
 }
 
