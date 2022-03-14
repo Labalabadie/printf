@@ -37,6 +37,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (format[i + 1] == '\0')
+				return(-1);
 			j = 0;
 			while (selector[j].x != '\0') 
 			{		
