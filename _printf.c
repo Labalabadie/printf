@@ -46,6 +46,14 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
+			if (selector[j].x == '\0')
+			{
+				_putchar('%');
+				_putchar(format[i + 1]);
+				i++;
+				counter = counter + 2; 
+				
+			}	
 			i++;
 		}
 	}
