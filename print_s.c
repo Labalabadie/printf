@@ -11,9 +11,6 @@ int print_s(va_list arg)
 	char *a = va_arg(arg, char*);
 	int i = 0;
 
-	if (!a)
-		a = "(null)";
-
 	while (*a != '\0')
 	{
 	_putchar(*a);
