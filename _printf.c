@@ -18,7 +18,6 @@ int _printf(const char *format, ...)
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
@@ -34,27 +33,23 @@ int _printf(const char *format, ...)
 			counter++;
 			i++;
 			i++;
-		continue;	
+		continue;
 		}
-		else 	
+		else
 		{
 			j = 0;
-			while (format[i + 1] != selector[j].x)
-			{
-				j++;
-			}
-			if (selector[j].f != NULL)
-			{
+			while (selector[j].x != '\0') 
+			{		
+				if (format[i + 1] == selector[j].x)
+				{
 				selector[j].f(arg);
 				counter++;
+				}
+				j++;
 			}
-			
-
+			i++;
 		}
-		i++;
-		i++;
 	}
 	va_end(arg);
 	return (counter);
 }
-
