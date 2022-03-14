@@ -42,8 +42,7 @@ int _printf(const char *format, ...)
 			{		
 				if (format[i + 1] == selector[j].x)
 				{
-				selector[j].f(arg);
-				counter++;
+				counter += selector[j].f(arg);
 				}
 				j++;
 			}
