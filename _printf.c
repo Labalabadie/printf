@@ -6,8 +6,7 @@
  **/
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int j = 0;
+	int i = 0, j = 0, counter = 0;
 	va_list arg;
 	pfunc selector[] = {
 		{'c', print_c},
@@ -26,9 +25,18 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[i]);
 			i++;
+			counter++;
 			continue;
 		}
-		else
+		else if (format[i] == '%' && format[i + 1] == '%')
+		{
+			_putchar(format[i]);
+			counter++;
+			i++;
+			i++;
+		continue;	
+		}
+		else 	
 		{
 			j = 0;
 			while (format[i + 1] != selector[j].x)
@@ -36,12 +44,17 @@ int _printf(const char *format, ...)
 				j++;
 			}
 			if (selector[j].f != NULL)
+			{
 				selector[j].f(arg);
+				counter++;
+			}
+			
+
 		}
 		i++;
 		i++;
 	}
 	va_end(arg);
-	return (i);
+	return (counter);
 }
 
