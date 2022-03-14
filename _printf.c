@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 			if (selector[j].f != NULL)
 			{
 				selector[j].f(arg);
-				counter++;
+				counter += selector[j].f(arg);
 			}
 			
 
