@@ -12,6 +12,8 @@ int _printf(const char *format, ...)
 	pfunc selector[] = {
 		{'c', print_c},
 		{'s', print_s},
+		{'d', print_i},
+		{'i', print_i},
 		{'\0', NULL}
 	};
 	va_start(arg, format);

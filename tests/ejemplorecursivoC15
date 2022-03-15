@@ -1,0 +1,21 @@
+#include "main.h"
+/**
+ *
+ *
+ */
+int print_ui(unsigned int num)
+{
+	if (num < 10)
+		return (_putchar(num + '0'));
+	return (_putchar((num % 10) + '0') + print_ui(num / 10));
+}
+int print_i(va_list arg)
+{
+	int i = va_arg(arg, int);
+	unsigned int a = 0;
+
+	if (i < 0)
+		_putchar('-');
+	a = (i < 0) ? -i : i;
+	return (print_ui(a) + (i < 0));
+}
