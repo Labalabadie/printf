@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * 
- *
+ * print_i - Handles "%d" & "%i".
+ * @arg: arguments of a list.
+ *Return:Number of characters printed.
  */
 int print_i(va_list arg)
 {
@@ -10,12 +11,14 @@ int print_i(va_list arg)
 	int j = i;
 	int a = 0;
 	int counter = 0;
-
-	if (i == 0)
-		return(_putchar('0'));
+	
+	if (!i)
+		return(0);
+	if (i == 0 || i == '\0')
+		return	(_putchar('0'));
 	if (i < 0)
 	{
-		return(print_ui(i));
+		return	(print_ui(i));
 	}
 	while (i > 0)
 	{
@@ -34,5 +37,5 @@ int print_i(va_list arg)
 	}
 	_putchar(j + '0');
 	counter++;
-	return(counter);
+	return	(counter);
 }
