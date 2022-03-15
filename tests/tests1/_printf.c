@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - function that produces output according to a format
  * @format: arguments passed
@@ -20,7 +21,6 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (format[i] != '\0')
 	{
-
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
@@ -36,7 +36,6 @@ int _printf(const char *format, ...)
 			i++;
 			continue;
 		}
-	
 		else
 		{
 			if (format[i + 1] == '\0')
@@ -45,11 +44,8 @@ int _printf(const char *format, ...)
 			while (selector[j].x != '\0') 
 			{		
 				if (format[i + 1] == selector[j].x)
-				{	
-					counter += selector[j].f(arg);
-					i++;
-					break;
-
+				{
+				counter += selector[j].f(arg);
 				}
 				j++;
 			}
@@ -59,6 +55,7 @@ int _printf(const char *format, ...)
 				_putchar(format[i + 1]);
 				i++;
 				counter = counter + 2; 
+				
 			}	
 			i++;
 		}

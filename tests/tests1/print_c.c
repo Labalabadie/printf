@@ -11,10 +11,6 @@ int print_c(va_list arg)
 	char c;
 
 	c = va_arg(arg, int);
-	if (c == '\0')
-		return (1);
-
-
 	_putchar(c);
 	return (1);
 }

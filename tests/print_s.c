@@ -1,4 +1,11 @@
 #include "main.h"
+
+/**
+ * print_s - checks for and prints strings
+ *
+ *
+ **/
+
 int print_s(va_list arg)
 {
 	char *a = va_arg(arg, char*);
