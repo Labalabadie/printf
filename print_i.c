@@ -11,16 +11,12 @@ int print_i(va_list arg)
 	int j = i;
 	int a = 0;
 	int counter = 0;
-	
+
 	if (i == 0 || i == '\0')
 		return	(_putchar('0'));
 	if (i < 0)
 	{
 		return	(print_ui(i));
-/*		i = -i;
-		_putchar('-');
-		counter++;
-		j = i;*/
 	}
 
 	while (i > 0)
