@@ -13,8 +13,7 @@ int print_s(va_list arg)
 
 	if (!a)
 	{
-		_putchar('\0');
-		return (1);
+		return (_printf("(null)"));
 	}
 	while (*a != '\0')
 	{
