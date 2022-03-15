@@ -4,12 +4,14 @@
  */
 int print_ui(unsigned int i)
 {
-        unsigned int j = i;
+        unsigned int j;
 	int a = 0;		 
   	int counter = 0;
 
 	_putchar('-');
 	counter++;
+	i = -i;
+	j = i;
 
 	while (i > 0)
 	{
