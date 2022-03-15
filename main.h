@@ -12,8 +12,6 @@ int print_s(va_list arg);
 int print_i(va_list arg);
 int _pow(int a, int b);
 int print_ui(unsigned int i);
-int rev_string(char *s);
-int _strlen(char *s);
 
 /**
  * struct pfunc - model for structs
