@@ -1,0 +1,105 @@
+
+## NAME AND SYNOPSIS
+
+NAME
+
+    _printf
+
+
+
+SYNOPSIS
+
+    #include "main.h"
+
+    _printf FORMAT [ARGUMENTS]... 
+
+## DESCRIPTION
+
+    "_printf" is a variadic function that produces an output according
+    to a input (format). 
+    
+    It tries to mimic the "printf" function included in the <stdio.h> lib.
+    
+    Our function uses structs to detect wich input is given and then 
+    writes it to the stdout (standard output).
+    
+    The format string controls the output given, it specifies how subsequent
+    arguments are converted for stdout. For more information see ##Conversion Specifiers
+
+## FORMAT
+
+    The format string is a character string. It's composed by the input and can be
+    given zero or more directives.
+    
+    These are: normal characters excluding "%" which are copied exact 
+    the same to the output; and the conversion specifications result adding zero
+    or more arguments.
+
+    
+
+## SYNTAX EXAMPLE
+
+    _printf("My name is %s.", str); ---> My name is <str content>.
+    
+    The arguments must correspond with the conversion specifier order. The arguments
+    are used in the given order.
+
+    Examples:
+    
+    1- 
+    _printf("Buenas Noches America");
+    Prints: Buenas Noches America
+    Return: 21 chars printed.
+    
+    2-
+    _printf("Le dicen %c%c la rompe corazones, %s %s", 'l', 'a', "falsas", NULL);
+    Prints: Le dicen la la rompe corazones, falsas (null)
+    Return: 45 chars printed.
+
+    3-
+    _printf("%i", INT_MAX);
+    Prints: 2147483647
+    Return: 10 chars printed.
+
+    4-
+    _printf("%i", INT_MIN);
+    Prints: -2147483648
+    Return: 11 chars printed.
+
+
+## CONVERSION SPECIFIERS
+
+    Is the character following the % character that specifies the type of 
+    conversion to be applied. The conversion specifiers to our _printf function are:
+
+    d, i    The int argument is converted to signed or unsigned decimal notation.
+            
+    
+    s    The const char * argument is expected to be a pointer to
+         an array of character type (pointer to a string).  Characters
+         from the array are written up to (but not including) a 
+         terminating null byte.
+
+    c   The char argument is expected to be the character to be printed.
+
+## RETURN VALUE
+
+    On successful run, the return of our _printf function returns our variable "counter"
+    wich returns (as it's name implies) the number count of characters printed, 
+    excluding the null byte ('\0') used to print strings.
+
+## AUTHORS
+
+    This _printf function was coded by Agustin "laba" Labadie and Germán "amorcito" Izquierdo
+    between the 12 and 15 of may of 2022 as a part of Holberton School's 
+    Software Engineering development program in it´s Montevideo, Uruguay campus.
+
+    Feel free to use our code to inspire yourself or as a reference to look up to, 
+    but even tough we find this exersice very hard to complete, we encourage you to write your own code.
+
+    It may be very hard, but is also very rewarding. This is the way.
+
+    GOOD LUCK!
+
+    [Agustin Labadie] (Mail: labalabadie@gmail.com )
+    [Germán Izquierdo] (Mail: izquierdoz.g@gmail.com) (Instagram: @ayamorcito)
