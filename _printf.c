@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _printf - function that produces output according to a format
  * @format: arguments passed
@@ -60,7 +60,6 @@ int _printf(const char *format, ...)
 				i++;
 				counter = counter + 2;
 			}
-			printf("contador de return = %d\n", counter);
 			i++;
 		}
 	}

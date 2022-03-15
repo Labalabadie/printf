@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_s - checks for and prints strings
@@ -12,8 +11,7 @@ int print_s(va_list arg)
 	
 	char *a = va_arg(arg, char*);
 	int i = 0;
-	printf("pase el varg\n");
-
+	
 	if (!a)
 	{
 		_putchar('\0');
