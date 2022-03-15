@@ -8,10 +8,9 @@
 
 int print_s(va_list arg)
 {
-	
 	char *a = va_arg(arg, char*);
 	int i = 0;
-	
+
 	if (!a)
 	{
 		_putchar('\0');
@@ -23,6 +22,5 @@ int print_s(va_list arg)
 		a++;
 		i++;
 	}
-	
 	return (i);
 }
