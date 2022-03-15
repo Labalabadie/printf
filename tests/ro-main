@@ -286,6 +286,8 @@ int main(void)
 	b = _printf("%d %d", INT_MIN + 34, INT_MAX - 33);
 	cont = cont + output(a,b);
 	printf("\n===============\n");
+	printf("test LABA");
+	_printf("%d%i%d%i\n", 0,0,0,0);
 	if (cont == 0)
 	{
 		GREEN;

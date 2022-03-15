@@ -1,15 +1,18 @@
 #include "main.h"
 /**
- *
+ * 
  *
  */
 int print_i(va_list arg)
 {
+
 	int i = va_arg(arg, int);
 	int j = i;
 	int a = 0;
 	int counter = 0;
 
+	if (i == 0)
+		return(_putchar('0'));
 	if (i < 0)
 	{
 		return(print_ui(i));
