@@ -22,7 +22,7 @@ int print_b(va_list arg)
 	{
 		n /=  2;
 	}
-	a = malloc(sizeof(int)*i);
+	a = malloc(sizeof(int)*i + 1);
 	j = i;
 	for (; i > 0; i--)
 	{
