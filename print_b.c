@@ -9,7 +9,7 @@
 
 int print_b(va_list arg)
 {
-	int = va_arg(arg, int);
+	int n = va_arg(arg, int);
 	unsigned int i;
 	unsigned int j;
 	char *a;
@@ -18,11 +18,6 @@ int print_b(va_list arg)
 
 	if (n == 0)
 		return(_putchar('0'));
-	if (n < 0)
-	{
-		print_ui(n);
-	}
-	m = n;
 	for (i = 0; n > 0; i++)
 	{
 		n /=  2;
@@ -40,9 +35,7 @@ int print_b(va_list arg)
 		i++;
 	_putchar(a[i] + '0');
 		counter++;
-
 	}
-	free(*a);
 	return(counter);
 
 }
