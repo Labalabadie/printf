@@ -16,6 +16,9 @@ int print_b(va_list arg)
 	int m = n;
 	int counter = 0;
 
+	if (n == 0)
+		return(_putchar('0'));
+
 	for (i = 0; n > 0; i++)
 	{
 		n /=  2;
@@ -35,6 +38,7 @@ int print_b(va_list arg)
 		counter++;
 
 	}
+	free(a);
 	return(counter);
 
 }
