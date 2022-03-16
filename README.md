@@ -1,4 +1,8 @@
-## README _PRINTF
+
+![helloworld](https://user-images.githubusercontent.com/98338462/158496175-46b426ee-5e60-45c1-8672-47335e83119e.PNG)
+
+
+### README _PRINTF
 
     This is a brief description of the code of the _printf function,
     developed by Agustín Labadie and Germán Izquierdo.
@@ -10,7 +14,7 @@
 
     Now, we will explain the functioning of our functions. 
 
-_printf.c 
+#### _printf.c 
 
     This is our main function. It's pourpuse is to produce an output according to a format, 
     returning the lenght of the output string and printing it's contents to stdout.
@@ -24,36 +28,46 @@ _printf.c
 
     It will also check for various border cases, including NULL arguments and a bunch of other cases.
 
-main.h 
+#### main.h 
 
     This is our library file. In here you cand find all the prototypes for our functions, 
     the used standard librearies, and the model for our structs. 
 
 
-print_c.c
+#### print_c.c
 
     This function will be called by the selector iteration to check for and print characters.
     It will return the number of printed characters.
 
-print_s.c
+#### print_s.c
     
     This function will be called by the selector iteration to check for and print strings.
     It will also check for a NULL string given as an argument, preventing this border case.
     It will return the number of printed characters.
 
-print_i.c
+#### print_i.c
 
-    Description
+    This function will be called by the selector iteration to check for and print intergers.
+    its range is from -2147483648 to -2147483647.
+    Returns number of printed characters.
 
-print_ui.c 
+#### print_ui.c 
 
-    description
+    This is an auxiliary function to print_i, handles negative numbers by unsigned int.
+    Returns number of printed characters.
 
-_putchar.c
+#### _putchar.c
 
     System call used to print the characters. It uses the write system call. 
     It's our flagship, the function we use to print all chars. man write(2) for more info
+    Returns 1 for success.
 
-_pow.c
+#### _pow.c
 
-    Function used to resolve the print_i.c and print_ui.c functions
+    Functions that calculates a numbers power, needs a base and an exponential.
+    Returns result.
+    
+    
+    
+    
+   (image:medium.com)
