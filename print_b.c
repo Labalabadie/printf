@@ -34,6 +34,7 @@ int print_b(va_list arg)
 		i++;
 	_putchar(a[i] + '0');
 		counter++;
+		free(a);
 	}
 	return(counter);
 
