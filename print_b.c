@@ -18,12 +18,6 @@ int print_b(va_list arg)
 
 	if (n == 0)
 		return(_putchar('0'));
-	if (n < 0)
-	{
-		n = - n;
-		_putchar('-');
-		counter++;
-	}
 	m = n;
 	for (i = 0; n > 0; i++)
 	{
