@@ -9,7 +9,7 @@
 
 int print_b(va_list arg)
 {
-	int n = va_arg(arg, int);
+	unsigned int n = va_arg(arg, unsigned int);
 	unsigned int i;
 	unsigned int j;
 	char *a;
@@ -24,7 +24,6 @@ int print_b(va_list arg)
 	}
 	a = malloc(sizeof(int)*i);
 	j = i;
-	
 	for (; i > 0; i--)
 	{
 		a[i] = m % 2;
