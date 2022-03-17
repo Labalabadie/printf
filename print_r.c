@@ -25,7 +25,7 @@ int print_r(va_list arg)
 	}
 	while (i >= 0)
 	{
-		if (b[i] == '%' && b[i -1] == '%')
+		if (b[i] == '%' && b[i -1] == '%' || b[i] == '%' && b[i - 1] == 'r')
 			i--;
 		_putchar(b[i]);
 		i--;
