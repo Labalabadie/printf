@@ -13,6 +13,7 @@ int print_i(va_list arg);
 int _pow(int a, int b);
 int print_ui(unsigned int i);
 int print_b(va_list arg);
+int print_r(va_list arg);
 
 /**
  * struct pfunc - model for structs
